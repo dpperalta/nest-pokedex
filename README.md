@@ -37,6 +37,18 @@ http://localhost:3000/api/v2/seed
 * MongoDB
 * Nest
 
+# Build de Producción
+1. Crear el archivo ```.env.prod```
+2. Llenar las variable de entorno para producción
+3. Construir la nueva imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. Para ejecutrar en modo detached la imagen de Docker
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
 
 # Notas
 Desplegar sin cambios en heroku
